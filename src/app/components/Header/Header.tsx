@@ -1,26 +1,45 @@
-import styles from "./Header.module.scss"
+"use client";
 
-import React from 'react'
+import Link from "next/link";
+import styles from "./Header.module.scss";
+import React, { useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  function toggleMenu() {
+    setIsMenuOpen((prev) => !prev);
+  }
+
   return (
     <header className={styles.header}>
       <nav className={styles.header_Container}>
-        <h2>Diego consultoria</h2>
+        <h2>Diego Consultoria</h2>
 
-        <ul>
-            <li>Início</li>
-            <li>Serviços</li>
-            <li>Sobre</li>
-            <li>Contato</li>
+        <div className={styles.hamburger} onClick={toggleMenu}>
+          {isMenuOpen ? <FaTimes size={28} /> : <FaBars size={28} />}
+        </div>
+
+        <ul className={`${styles.menu} ${isMenuOpen ? styles.active : ""}`}>
+          <li>
+            <Link href="#">Início</Link>
+          </li>
+          <li>
+            <Link href="#">Serviços</Link>
+          </li>
+          <li>
+            <Link href="#">Sobre</Link>
+          </li>
+          <li>
+            <Link href="#">Contato</Link>
+          </li>
         </ul>
-        
-        <button>
-            Fale Conosco
-        </button>
+
+        <button className={styles.button}>Fale Conosco</button>
       </nav>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
