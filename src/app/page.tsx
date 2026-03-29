@@ -3,10 +3,8 @@ import Header from "./components/Header/Header";
 import CardAbout from "./components/CardAbout/CardAbout";
 import { PiCalculatorLight } from "react-icons/pi"
 import { IoTimeOutline } from "react-icons/io5";
-import { GiPresent } from "react-icons/gi";
 import { RxPeople } from "react-icons/rx";
 import { AiOutlineFileText } from "react-icons/ai";
-import { FaUserCheck } from "react-icons/fa";
 import { FiUserCheck } from "react-icons/fi";
 import { SlPresent } from "react-icons/sl";
 
@@ -38,7 +36,6 @@ export default function Home() {
             <h1>IMAGEM</h1>
           </div>
         </div>
-
       </section>
       <section className={styles.servicesBg}>
         <div className={styles.services_container}>
@@ -75,6 +72,11 @@ export default function Home() {
             title="Admissão, rescisão, férias e 13° salário"
             text="Gestão completa do ciclo de vida do colaborador com agilidade e segurança."
           />
+        </div>
+        <div className={styles.services_contact}>
+          <h3>Pronto para simplificar seu Departamento Pessoal?</h3>
+          <p>Entre em contato conosco e descubra como podemos ajudar sua empresa a crescer com segurança e conformidade.</p>
+          <button>Solicitar Orçamento</button>
         </div>
       </section>
     </>
