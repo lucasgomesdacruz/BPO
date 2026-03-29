@@ -6,6 +6,8 @@
     margin: 0 auto;
     padding: 0 1rem;
     margin-top: 2rem;
+    margin-bottom: 4rem;
+
 
     .hero_container {
         display: flex;
@@ -85,5 +87,50 @@
             }
 
         }
+    }
+
+
+}
+
+.servicesBg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    margin-top: 2rem;
+
+    .services_container {
+        text-align: center;
+        margin-bottom: 2rem;
+
+        h2 {
+            font-size: 3rem;
+            line-height: 1;
+            margin-bottom: 2rem;
+
+            span {
+                color: var(--color-variable-primary);
+
+                svg {
+                    color: white;
+                }
+            }
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            color: var(--color-tercery);
+            font-weight: 500;
+        }
+    }
+
+    .services_cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        align-items: stretch;
     }
 }
