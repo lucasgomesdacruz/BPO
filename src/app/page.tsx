@@ -13,6 +13,8 @@ import { FaRegComment } from "react-icons/fa";
 import { MdOutlineMail } from "react-icons/md";
 import Badge from "./components/ux/Badge/Badge";
 import Footer from "./components/Footer/Footer";
+import Image from "next/image";
+import logoHero from "../../public/images/logoHero.png"
 
 export default function Home() {
   return (
@@ -26,7 +28,7 @@ export default function Home() {
             />
             <h1>Soluções completas em <span>Departamento Pessoal</span> para sua empresa</h1>
             <p>
-              A Diego Consultoria oferece serviços especializados em Departamento
+              A aqueiro departamento pessoal oferece serviços especializados em Departamento
               Pessoal para simplificar sua rotina e garantir conformidade com a
               legislação.
             </p>
@@ -42,7 +44,11 @@ export default function Home() {
 
           </div>
           <div className={styles.container_image}>
-            <h1>IMAGEM</h1>
+            <Image
+              src={logoHero}
+              alt='Logo Arqueiro'
+              priority={true}
+            />
           </div>
         </div>
       </section>
@@ -96,7 +102,7 @@ export default function Home() {
           <Badge
             text="Sobre a empresa"
           />
-          <h3>Sobre a <span>Diego Consultoria</span></h3>
+          <h3>Sobre a <span>Arqueiro Departamento</span></h3>
           <p>Com experiência e dedicação, oferecemos soluções personalizadas em Departamento Pessoal para empresas de todos os portes — com ética, responsabilidade e foco em resultados.</p>
         </div>
         <div className={styles.about_cards}>

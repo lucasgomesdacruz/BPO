@@ -4,6 +4,8 @@ import Link from "next/link";
 import styles from "./Header.module.scss";
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import logoHero from '../../../../public/images/logoHero.png'
+import Image from "next/image";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,7 +17,12 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <nav className={styles.header_Container}>
-        <h2>Diego Consultoria</h2>
+        <Image
+          src={logoHero}
+          alt="Logo Arqueiro"
+          width={180}
+          priority
+        />
 
         <div className={styles.hamburger} onClick={toggleMenu}>
           {isMenuOpen ? <FaTimes size={28} /> : <FaBars size={28} />}
