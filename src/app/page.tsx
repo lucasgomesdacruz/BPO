@@ -11,6 +11,8 @@ import { VscTarget } from "react-icons/vsc";
 import { LuPhone } from "react-icons/lu";
 import { FaRegComment } from "react-icons/fa";
 import { MdOutlineMail } from "react-icons/md";
+import Badge from "./components/ux/Badge/Badge";
+import Footer from "./components/Footer/Footer";
 
 export default function Home() {
   return (
@@ -19,6 +21,9 @@ export default function Home() {
       <section className={styles.heroBg}>
         <div className={styles.hero_container}>
           <div className={styles.hero_text}>
+            <Badge
+              text="Conformidade Garantida"
+            />
             <h1>Soluções completas em <span>Departamento Pessoal</span> para sua empresa</h1>
             <p>
               A Diego Consultoria oferece serviços especializados em Departamento
@@ -43,6 +48,9 @@ export default function Home() {
       </section>
       <section className={styles.servicesBg}>
         <div className={styles.services_container}>
+          <Badge
+            text="Nossos Serviços"
+          />
           <h2>Soluções Completas para <span>Departamento Pessoal</span></h2>
           <h3>Oferecemos uma gama completa de serviços especializados para simplificar sua gestão de pessoas e garantir total conformidade com a legislação trabalhista.</h3>
         </div>
@@ -85,6 +93,9 @@ export default function Home() {
       </section>
       <section className={styles.aboutBg}>
         <div className={styles.about_container}>
+          <Badge
+            text="Sobre a empresa"
+          />
           <h3>Sobre a <span>Diego Consultoria</span></h3>
           <p>Com experiência e dedicação, oferecemos soluções personalizadas em Departamento Pessoal para empresas de todos os portes — com ética, responsabilidade e foco em resultados.</p>
         </div>
@@ -113,6 +124,9 @@ export default function Home() {
       </section>
       <section className={styles.contact}>
         <div className={styles.contact_container}>
+          <Badge
+            text="Entre em Contato"
+          />
           <h3>Fale com a gente</h3>
           <p>Escolha o canal que preferir e entre em contato conosco. Estamos prontos para ajudar sua empresa!</p>
         </div>
@@ -140,6 +154,7 @@ export default function Home() {
           />
         </div>
       </section>
+      <Footer />
     </>
 
   );
