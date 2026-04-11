@@ -44,6 +44,26 @@
         line-height: 1.6;
         color: var(--color-tercery);
     }
+
+    .button_services {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--color-variable-primary);
+        border: none;
+        border-radius: 5px;
+        width: 80%;
+        height: 2rem;
+        color: white;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background 0.3s;
+        font-size: 0.90rem;
+
+        &:hover {
+            background-color: var(--color-primary);
+        }
+    }
 }
 
 .card:hover {
