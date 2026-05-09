@@ -8,7 +8,7 @@ import { AiOutlineFileText, AiOutlineHeart, AiOutlineSafety } from "react-icons/
 import { FiAward, FiUserCheck } from "react-icons/fi";
 import { SlPresent } from "react-icons/sl";
 import { VscTarget } from "react-icons/vsc";
-import { LuPhone } from "react-icons/lu";
+import { LuCircleCheckBig, LuPhone } from "react-icons/lu";
 import { FaRegComment } from "react-icons/fa";
 import { MdOutlineMail } from "react-icons/md";
 import Badge from "./components/ux/Badge/Badge";
@@ -158,6 +158,18 @@ export default function Home() {
             subText="Resposta em até 24h"
             buttonText="Enviar e-mail"
           />
+        </div>
+        <div className={styles.services_contact}>
+          <div>
+            <h3>Por que escolher a Arqueiro Departamento?</h3>
+            <p>Somos referência em soluções de Departamento Pessoal, oferecendo excelência e confiança para sua empresa.</p>
+          </div>
+          <ul>
+            <li><LuCircleCheckBig size={20} />Atendimento personalizado e especializado</li>
+            <li><LuCircleCheckBig size={20} />Tecnologia avançada e segura</li>
+            <li><LuCircleCheckBig size={20} />Equipe qualificada e experiente</li>
+            <li><LuCircleCheckBig size={20} />Conformidade total garantida</li>
+          </ul>
         </div>
       </section>
       <Footer />

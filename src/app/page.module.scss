@@ -284,4 +284,42 @@
         align-items: stretch;
         margin-bottom: 2rem;
     }
+
+    .services_contact {
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        text-align: left;
+        gap: 1rem;
+        width: 100%;
+        border-radius: 8px;
+        padding: 3rem;
+        background-color: var(--color-variable-primary);
+
+        h3 {
+            font-size: 1.5rem;
+            line-height: 2.25rem;
+            color: white;
+        }
+
+        p {
+            font-size: 0.875rem;
+            line-height: 1.75rem;
+            color: white;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            li {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                color: white;
+            }
+        }
+    }
 }
