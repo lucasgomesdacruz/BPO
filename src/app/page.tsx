@@ -4,11 +4,11 @@ import CardAbout from "./components/CardAbout/CardAbout";
 import { PiCalculatorLight } from "react-icons/pi"
 import { IoTimeOutline } from "react-icons/io5";
 import { RxPeople } from "react-icons/rx";
-import { AiOutlineFileText, AiOutlineHeart, AiOutlineSafety } from "react-icons/ai";
+import { AiOutlineEye, AiOutlineFileText, AiOutlineHeart, AiOutlineSafety, AiOutlineStar } from "react-icons/ai";
 import { FiAward, FiUserCheck } from "react-icons/fi";
 import { SlPresent } from "react-icons/sl";
 import { VscTarget } from "react-icons/vsc";
-import { LuPhone } from "react-icons/lu";
+import { LuCircleCheckBig, LuPhone } from "react-icons/lu";
 import { FaRegComment } from "react-icons/fa";
 import { MdOutlineMail } from "react-icons/md";
 import Badge from "./components/ux/Badge/Badge";
@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <section className={styles.heroBg}>
+      <section id="inicio" className={styles.heroBg}>
         <div className={styles.hero_container}>
           <div className={styles.hero_text}>
             <Badge
@@ -46,13 +46,13 @@ export default function Home() {
           <div className={styles.container_image}>
             <Image
               src={logoHero}
-              alt='Logo Arqueiro'
-              priority={true}
+              alt="Logo Arqueiro"
+              priority
             />
           </div>
         </div>
       </section>
-      <section className={styles.servicesBg}>
+      <section id="servicos" className={styles.servicesBg}>
         <div className={styles.services_container}>
           <Badge
             text="Nossos Serviços"
@@ -97,7 +97,7 @@ export default function Home() {
           <button>Solicitar Orçamento</button>
         </div>
       </section>
-      <section className={styles.aboutBg}>
+      <section id="sobre" className={styles.aboutBg}>
         <div className={styles.about_container}>
           <Badge
             text="Sobre a empresa"
@@ -127,8 +127,20 @@ export default function Home() {
             text="Conhecimento atualizado em legislação trabalhista."
           />
         </div>
+        <div className={styles.about_cards_secondary}>
+          <CardAbout
+            icon={AiOutlineStar}
+            title="Missão"
+            text="Oferecer soluções completas e personalizadas em Departamento Pessoal, garantindo conformidade legal, eficiência operacional e tranquilidade para que nossos clientes possam focar no crescimento de seus negócios."
+          />
+          <CardAbout
+            icon={AiOutlineEye}
+            title="Visão"
+            text="Ser referência em consultoria de Departamento Pessoal, reconhecida pela excelência técnica, atendimento humanizado e pela construção de relações de confiança duradouras com nossos clientes."
+          />
+        </div>
       </section>
-      <section className={styles.contact}>
+      <section id="contato" className={styles.contact}>
         <div className={styles.contact_container}>
           <Badge
             text="Entre em Contato"
@@ -158,6 +170,18 @@ export default function Home() {
             subText="Resposta em até 24h"
             buttonText="Enviar e-mail"
           />
+        </div>
+        <div className={styles.services_contact}>
+          <div>
+            <h3>Por que escolher a Arqueiro Departamento?</h3>
+            <p>Somos referência em soluções de Departamento Pessoal, oferecendo excelência e confiança para sua empresa.</p>
+          </div>
+          <ul>
+            <li><LuCircleCheckBig size={20} />Atendimento personalizado</li>
+            <li><LuCircleCheckBig size={20} />Tecnologia avançada e segura</li>
+            <li><LuCircleCheckBig size={20} />Equipe qualificada e experiente</li>
+            <li><LuCircleCheckBig size={20} />Conformidade total garantida</li>
+          </ul>
         </div>
       </section>
       <Footer />

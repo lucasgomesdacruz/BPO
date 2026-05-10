@@ -1,10 +1,10 @@
 import styles from './Badge.module.scss'
 
-interface badgeProps {
+interface BadgeProps {
     text: string;
 }
 
-const Badge = ({ text }: badgeProps) => {
+const Badge = ({ text }: BadgeProps) => {
 
     return (
         <span className={styles.badge}>

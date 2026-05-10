@@ -14,6 +14,10 @@ const Header = () => {
     setIsMenuOpen((prev) => !prev);
   }
 
+  function closeMenu() {
+    setIsMenuOpen(false);
+  }
+
   return (
     <header className={styles.header}>
       <nav className={styles.header_Container}>
@@ -30,16 +34,16 @@ const Header = () => {
 
         <ul className={`${styles.menu} ${isMenuOpen ? styles.active : ""}`}>
           <li>
-            <Link href="#">Início</Link>
+            <Link href="#inicio" onClick={closeMenu}>Início</Link>
           </li>
           <li>
-            <Link href="#">Serviços</Link>
+            <Link href="#servicos" onClick={closeMenu}>Serviços</Link>
           </li>
           <li>
-            <Link href="#">Sobre</Link>
+            <Link href="#sobre" onClick={closeMenu}>Sobre</Link>
           </li>
           <li>
-            <Link href="#">Contato</Link>
+            <Link href="#contato" onClick={closeMenu}>Contato</Link>
           </li>
         </ul>
 
