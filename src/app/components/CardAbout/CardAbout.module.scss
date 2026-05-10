@@ -4,11 +4,17 @@
     justify-content: space-between;
     align-items: center;
     height: 100%;
-
     padding: 1.5rem;
     border-radius: 8px;
 
-    background: white;
+    background:
+        linear-gradient(white, white) padding-box,
+        linear-gradient(to right, #14b8a6, #0d9488, #0f766e) border-box;
+
+    border-top: 5px solid transparent;
+    border-left: 0 solid transparent;
+    border-right: 0 solid transparent;
+    border-bottom: 0 solid transparent;
 
     box-shadow: 0 8px 12px -4px #00000033;
 
@@ -22,9 +28,9 @@
         margin-bottom: 1rem;
         width: 4rem;
         height: 4rem;
-        background-color: var(--color-variable-primary);
+        background: linear-gradient(to right, #14b8a6, #0d9488, #0f766e) border-box;
         border-radius: 8px;
-
+        transition-duration: 0.5s;
 
         svg {
             color: white;
