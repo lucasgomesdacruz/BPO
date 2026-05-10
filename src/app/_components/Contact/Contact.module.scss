@@ -95,8 +95,57 @@
 
 @media (max-width: 768px) {
     .contact {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+
+        .contact_container {
+            margin-bottom: 2.5rem;
+
+            h3 {
+                font-size: 2.5rem;
+                margin-bottom: 1.5rem;
+            }
+
+            p {
+                font-size: 1.1rem;
+            }
+        }
+
+        .contact_cards {
+            grid-template-columns: 1fr;
+        }
+
+        .services_contact {
+            grid-template-columns: 1fr;
+            text-align: center;
+            padding: 2rem;
+
+            h3,
+            p {
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .contact {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+
+        .contact_container {
+            margin-bottom: 1.5rem;
+
+            h3 {
+                font-size: 1.75rem;
+                line-height: 1.3;
+                margin-bottom: 1rem;
+            }
+
+            p {
+                font-size: 0.95rem;
+            }
+        }
 
         .contact_cards {
             grid-template-columns: 1fr;
