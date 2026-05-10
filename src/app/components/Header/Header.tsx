@@ -34,16 +34,16 @@ const Header = () => {
 
         <ul className={`${styles.menu} ${isMenuOpen ? styles.active : ""}`}>
           <li>
-            <Link href="#inicio" onClick={closeMenu}>Início</Link>
+            <Link href="/" onClick={closeMenu}>Início</Link>
           </li>
           <li>
-            <Link href="#servicos" onClick={closeMenu}>Serviços</Link>
+            <Link href="/servicos" onClick={closeMenu}>Serviços</Link>
           </li>
           <li>
-            <Link href="#sobre" onClick={closeMenu}>Sobre</Link>
+            <Link href="/sobre" onClick={closeMenu}>Sobre</Link>
           </li>
           <li>
-            <Link href="#contato" onClick={closeMenu}>Contato</Link>
+            <Link href="/contato" onClick={closeMenu}>Contato</Link>
           </li>
         </ul>
 
