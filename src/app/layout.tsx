@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Poppins } from "next/font/google";
+import { PrimeReactProvider } from "primereact/api";
+
+import "primereact/resources/themes/lara-light-cyan/theme.css";
+import "primeicons/primeicons.css";
 import "./globals.css";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,7 +37,9 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable}`}>
-        {children}
+        <PrimeReactProvider>
+          {children}
+        </PrimeReactProvider>
       </body>
     </html>
   );
