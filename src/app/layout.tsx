@@ -5,6 +5,8 @@ import { PrimeReactProvider } from "primereact/api";
 import "primereact/resources/themes/lara-light-cyan/theme.css";
 import "primeicons/primeicons.css";
 import "./globals.css";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 
 const geistSans = Geist({
@@ -38,7 +40,9 @@ export default function RootLayout({
     <html lang="pt-br">
       <body className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable}`}>
         <PrimeReactProvider>
+          <Header />
           {children}
+          <Footer />
         </PrimeReactProvider>
       </body>
     </html>
