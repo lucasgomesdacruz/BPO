@@ -10,8 +10,6 @@
 
 * {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
   list-style: none;
 }
 
@@ -27,3 +25,7 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+.p-carousel-indicator.p-highlight button {
+  background: #006a6a !important;
+} 

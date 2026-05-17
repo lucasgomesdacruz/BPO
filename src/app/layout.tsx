@@ -2,9 +2,15 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Poppins } from "next/font/google";
 import { PrimeReactProvider } from "primereact/api";
 
-import "primereact/resources/themes/lara-light-cyan/theme.css";
-import "primeicons/primeicons.css";
+
 import "./globals.css";
+
+import "primereact/resources/themes/lara-light-cyan/theme.css";
+// import "primereact/resources/primereact.min.css";
+import "primeicons/primeicons.css";
+// import "primeflex/primeflex.css";
+
+
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 
