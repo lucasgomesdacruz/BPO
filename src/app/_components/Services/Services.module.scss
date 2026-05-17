@@ -10,6 +10,31 @@
     padding-top: 5rem;
     padding-bottom: 5rem;
 
+    .skeletonCard {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        width: 100%;
+        min-height: 280px;
+
+        padding: 2rem;
+        border-radius: 16px;
+
+        background: white;
+        border: 1px solid #e5e7eb;
+
+        margin-bottom: 2rem;
+    }
+
+    .skeletonIndicators {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+
+        margin-top: auto;
+    }
+
     .services_container {
         text-align: center;
         margin-bottom: 2rem;
@@ -33,6 +58,10 @@
             color: var(--color-tercery);
             font-weight: 500;
         }
+    }
+
+    .mobileCarousel {
+        display: none;
     }
 
     .services_cards {
@@ -123,9 +152,15 @@
             }
         }
 
+        .mobileCarousel {
+            display: block;
+            width: 100%;
+        }
+
         .services_cards,
         .services_contact {
             width: 100%;
+            display: none;
         }
 
         .services_cards {
