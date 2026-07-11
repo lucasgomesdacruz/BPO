@@ -34,15 +34,13 @@ const Hero = () => {
                     <div className="flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start">
                         <Button
                             variant="outline"
-                            size="lg"
-                            className="h-11 bg-(--color-variable-primary) px-8 text-white transition-colors duration-300 hover:bg-(--color-primary)"
+                            className="h-11 bg-(--color-variable-primary) px-8 text-white transition-colors duration-300 hover:bg-(--color-primary) text-base"
                         >
                             Conheça nossos serviços
                         </Button>
                         <Button
                             variant="outline"
-                            size="lg"
-                            className="h-11 border-(--color-variable-primary) px-8 text-(--color-variable-primary) transition-colors duration-300 hover:text-(--color-secodary)"
+                            className="h-11 border-(--color-variable-primary) px-8 text-(--color-variable-primary) transition-colors duration-300 hover:text-(--color-secodary) text-base"
                         >
                             Fale Conosco
                         </Button>
