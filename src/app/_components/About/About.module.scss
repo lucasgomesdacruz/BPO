@@ -10,6 +10,31 @@
     padding-bottom: 5rem;
     text-align: center;
 
+    .skeletonCard {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        width: 100%;
+        min-height: 280px;
+
+        padding: 2rem;
+        border-radius: 16px;
+
+        background: white;
+        border: 1px solid #e5e7eb;
+
+        margin-bottom: 2rem;
+    }
+
+    .skeletonIndicators {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+
+        margin-top: auto;
+    }
+
     .about_container {
         display: flex;
         justify-content: center;
@@ -38,12 +63,19 @@
         }
     }
 
+    .mobileCarousel {
+        display: none;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
     .about_cards {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 2rem;
         align-items: stretch;
         margin-bottom: 2rem;
+        height: 300px;
     }
 
     .about_cards_secondary {
@@ -84,9 +116,13 @@
             }
         }
 
+        .mobileCarousel {
+            display: block;
+        }
+
         .about_cards,
         .about_cards_secondary {
-            grid-template-columns: 1fr;
+            display: none;
         }
     }
 }

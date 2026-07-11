@@ -8,20 +8,17 @@ import { RxPeople } from "react-icons/rx";
 import { AiOutlineFileText } from "react-icons/ai";
 import { FiUserCheck } from "react-icons/fi";
 import { SlPresent } from "react-icons/sl";
-import useWindowSize from "@/app/hooks/useWindow";
 import { Carousel } from "primereact/carousel";
 import { useEffect, useState } from "react";
 import { Skeleton } from "primereact/skeleton";
 
 
 const Services = () => {
-  const size = useWindowSize()
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     setLoaded(true);
   }, []);
-  // const isSmallScreen = typeof size.width === "number" && size.width <= 720
 
   const services = [
     {
