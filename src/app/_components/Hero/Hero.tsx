@@ -11,7 +11,7 @@ const Hero = () => {
             <div className="flex w-full flex-col items-center gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
                 <div className="w-full max-w-2xl text-center lg:text-left">
                     <Badge text="Conformidade Garantida" />
-                    <h1 className="mx-auto mb-6 max-w-[12ch] text-4xl font-semibold leading-tight sm:text-5xl lg:mx-0 lg:max-w-[10ch] lg:text-6xl">
+                    <h1 className="mx-auto mb-6 max-w-[12ch] text-4xl font-semibold leading-17 sm:text-5xl lg:mx-0 lg:max-w-[12ch] lg:text-6xl">
                         Soluções completas em <span className="text-(--color-variable-primary)">Departamento Pessoal</span> para sua empresa
                     </h1>
                     <p className="mx-auto mb-6 max-w-[45ch] text-base leading-7 text-(--color-tercery) sm:text-lg lg:mx-0">
