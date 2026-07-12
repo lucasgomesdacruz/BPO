@@ -7,11 +7,11 @@ import { Button } from "@/components/ui/button";
 
 const Hero = () => {
     return (
-        <section id="inicio" className="mx-auto flex max-w-7xl items-center justify-center px-4 py-16 sm:px-6 lg:px-8">
+        <section id="inicio" className="mx-auto flex max-w-7xl items-center justify-center px-4 py-10 sm:px-6 lg:px-8">
             <div className="flex w-full flex-col items-center gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
-                <div className="w-full max-w-2xl text-center lg:text-left">
+                <div className="w-full max-w-2xl">
                     <Badge text="Conformidade Garantida" />
-                    <h1 className="mx-auto mb-6 max-w-[12ch] text-4xl font-semibold leading-17 sm:text-5xl lg:mx-0 lg:max-w-[12ch] lg:text-6xl">
+                    <h1 className="mb-6 max-w-[12ch] lg:max-w-[12ch] md:max-w-[16ch] font-semibold lg:text-left md:text-center text-left lg:leading-17 md:leading-17 leading-12 lg:text-6xl md:text-6xl text-5xl">
                         Soluções completas em <span className="text-(--color-variable-primary)">Departamento Pessoal</span> para sua empresa
                     </h1>
                     <p className="mx-auto mb-6 max-w-[45ch] text-base leading-7 text-(--color-tercery) sm:text-lg lg:mx-0">
@@ -34,7 +34,7 @@ const Hero = () => {
                     <div className="flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start">
                         <Button
                             variant="outline"
-                            className="h-11 bg-(--color-variable-primary) px-8 text-white transition-colors duration-300 hover:bg-(--color-primary) text-base"
+                            className="h-11 bg-(--color-variable-primary) px-8 text-white transition-colors duration-300 hover:bg-(--color-primary) hover:text-white text-base"
                         >
                             Conheça nossos serviços
                         </Button>
@@ -46,8 +46,13 @@ const Hero = () => {
                         </Button>
                     </div>
                 </div>
-                <div className="flex w-full max-w-88 justify-center sm:max-w-104 lg:max-w-lg lg:justify-end">
-                    <Image src={logoHero} alt="Logo Arqueiro" priority className="h-auto w-full" />
+                <div className="hidden w-full max-w-lg lg:flex lg:justify-end">
+                    <Image
+                        src={logoHero}
+                        alt="Logo Arqueiro"
+                        priority
+                        className="h-auto w-full"
+                    />
                 </div>
             </div>
         </section>
