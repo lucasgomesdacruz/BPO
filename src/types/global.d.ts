@@ -7,6 +7,6 @@ declare module '*.module.sass';
 
 // If you use other static assets import types (images, svgs), add them here:
 declare module '*.svg' {
-  const content: any;
+  const content: string;
   export default content;
 }

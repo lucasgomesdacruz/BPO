@@ -20,8 +20,8 @@ const Header = () => {
     }, [width]);
 
     return (
-        <header className="w-ful">
-            <div className="mx-auto flex max-w-7xl items-center justify-between h-20">
+        <header className="w-full">
+            <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center gap-3 md:gap-6">
                     <Link href="/" aria-label="Home" className="block">
                         <Image
@@ -30,6 +30,7 @@ const Header = () => {
                             width={180}
                             height={62}
                             priority
+                            className="h-auto w-auto"
                         />
                     </Link>
                 </div>
@@ -52,11 +53,17 @@ const Header = () => {
 
                     {/* Mobile sheet trigger */}
                     <Sheet open={open} onOpenChange={setOpen}>
-                        <SheetTrigger>
-                            <button aria-label="Abrir menu" className="inline-flex items-center rounded-md p-2 text-2xl md:hidden">
-                                <FaBars />
-                            </button>
-                        </SheetTrigger>
+                        <SheetTrigger
+                            render={
+                                <button
+                                    type="button"
+                                    aria-label="Abrir menu"
+                                    className="inline-flex items-center rounded-md p-2 text-2xl md:hidden"
+                                >
+                                    <FaBars />
+                                </button>
+                            }
+                        />
 
                         <SheetContent side="right" className="w-full sm:max-w-sm md:max-w-md">
                             <ul className="flex justify-center h-full text-center flex-col gap-5">
