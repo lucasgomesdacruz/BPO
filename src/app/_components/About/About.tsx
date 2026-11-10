@@ -1,12 +1,11 @@
 "use client";
-import styles from "./About.module.scss";
 import Badge from "../../components/ux/Badge/Badge";
 import CardAbout from "../../components/CardAbout/CardAbout";
 import { AiOutlineSafety, AiOutlineHeart, AiOutlineStar, AiOutlineEye } from "react-icons/ai";
 import { VscTarget } from "react-icons/vsc";
 import { FiAward } from "react-icons/fi";
-import { Carousel } from "primereact/carousel";
-import { Skeleton } from "primereact/skeleton";
+import { Carousel } from "@/components/ui/carousel";
+import { Skeleton } from "@/components/ui/skeleton";
 import { useEffect, useState } from "react";
 
 const About = () => {
@@ -56,46 +55,47 @@ const About = () => {
   );
 
   return (
-    <section id="sobre" className={styles.aboutBg}>
-      <div className={styles.about_container}>
+    <section id="sobre" className="mx-auto flex max-w-7xl flex-col items-center px-4 pb-20 pt-20 text-center sm:px-6 lg:px-8">
+      <div className="mb-10 flex max-w-4xl flex-col items-center">
         <Badge text="Sobre a empresa" />
-        <h3>
-          Sobre a <span>Arqueiro Departamento</span>
+        <h3 className="mb-8 text-3xl font-bold leading-none text-slate-900 sm:text-4xl lg:text-5xl">
+          Sobre a <span className="text-(--color-variable-primary)">Arqueiro Departamento</span>
         </h3>
-        <p>
+        <p className="max-w-3xl text-base leading-8 text-(--color-tercery) sm:text-xl">
           Com experiência e dedicação, oferecemos soluções personalizadas em Departamento Pessoal para empresas de todos os portes — com ética, responsabilidade e foco em resultados.
         </p>
       </div>
-      <div className={styles.mobileCarousel}>
+
+      <div className="mb-8 w-full md:hidden">
         {loaded ? (
           <Carousel
-            value={aboutItems}
+            items={aboutItems}
             itemTemplate={itemTemplate}
-            numVisible={1}
-            numScroll={1}
             showIndicators
           />
         ) : (
-          <div className={styles.skeletonCard}>
-            <Skeleton shape="circle" size="3.5rem" />
-            <Skeleton width="70%" height="2rem" />
-            <Skeleton width="100%" height="1rem" />
-            <Skeleton width="90%" height="1rem" />
-            <Skeleton width="80%" height="1rem" />
-            <div className={styles.skeletonIndicators}>
-              <Skeleton shape="circle" size="0.8rem" />
-              <Skeleton shape="circle" size="0.8rem" />
-              <Skeleton shape="circle" size="0.8rem" />
+          <div className="flex min-h-[280px] w-full flex-col gap-4 rounded-2xl border border-slate-200 bg-white p-8">
+            <Skeleton className="h-14 w-14 rounded-full" />
+            <Skeleton className="h-8 w-[70%]" />
+            <Skeleton className="h-4 w-full" />
+            <Skeleton className="h-4 w-[90%]" />
+            <Skeleton className="h-4 w-[80%]" />
+            <div className="mt-auto flex justify-center gap-2">
+              <Skeleton className="h-3 w-3 rounded-full" />
+              <Skeleton className="h-3 w-3 rounded-full" />
+              <Skeleton className="h-3 w-3 rounded-full" />
             </div>
           </div>
         )}
       </div>
-      <div className={styles.about_cards}>
+
+      <div className="mb-8 hidden w-full gap-8 md:grid md:grid-cols-2 xl:grid-cols-4">
         {aboutItems.slice(0, 4).map((item) => (
           <CardAbout key={item.title} icon={item.icon} title={item.title} text={item.text} />
         ))}
       </div>
-      <div className={styles.about_cards_secondary}>
+
+      <div className="hidden w-full gap-8 md:grid md:grid-cols-2">
         {aboutItems.slice(4).map((item) => (
           <CardAbout key={item.title} icon={item.icon} title={item.title} text={item.text} />
         ))}
