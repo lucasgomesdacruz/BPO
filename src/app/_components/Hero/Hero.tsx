@@ -3,8 +3,6 @@ import Image from "next/image";
 import logoHero from "../../../../public/images/logoHero.png";
 import { LuCircleCheckBig, LuShield } from "react-icons/lu";
 import { RxPeople } from "react-icons/rx";
-import { Button } from "@/components/ui/button";
-
 const Hero = () => {
     return (
         <section id="inicio" className="mx-auto flex max-w-7xl items-center justify-center px-4 py-10 sm:px-6 lg:px-8">
@@ -32,18 +30,20 @@ const Hero = () => {
                     </div>
 
                     <div className="flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start">
-                        <Button
-                            variant="outline"
-                            className="h-11 bg-(--color-variable-primary) px-8 text-white transition-colors duration-300 hover:bg-(--color-primary) hover:text-white text-base"
+                        <a
+                            href="/#servicos"
+                            className="inline-flex h-11 items-center justify-center rounded-md bg-[#006a6a] px-8 text-base text-white transition-colors duration-300 hover:bg-[#003737] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#006a6a]"
                         >
                             Conheça nossos serviços
-                        </Button>
-                        <Button
-                            variant="outline"
-                            className="h-11 border-(--color-variable-primary) px-8 text-(--color-variable-primary) transition-colors duration-300 hover:text-(--color-secodary) text-base"
+                        </a>
+                        <a
+                            href="https://wa.me/5521969538015"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex h-11 items-center justify-center rounded-md border border-[#006a6a] px-8 text-base text-[#006a6a] transition-colors duration-300 hover:bg-[#006a6a] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#006a6a]"
                         >
                             Fale Conosco
-                        </Button>
+                        </a>
                     </div>
                 </div>
                 <div className="hidden w-full max-w-lg lg:flex lg:justify-end">

@@ -7,6 +7,7 @@ import { RxPeople } from "react-icons/rx";
 import { AiOutlineFileText } from "react-icons/ai";
 import { FiUserCheck } from "react-icons/fi";
 import { SlPresent } from "react-icons/sl";
+import { RiAuctionLine } from "react-icons/ri";
 import { Carousel } from "@/components/ui/carousel";
 import { useEffect, useState } from "react";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -43,6 +44,11 @@ const Services = () => {
       icon: AiOutlineFileText,
       title: "Envios aos órgãos fiscais",
       text: "Transmissão segura de eventos via eSocial, FGTS Digital, Conectividade ICPv2, DCTFWeb, EFD Reinf e PerdComp Web.",
+    },
+    {
+      icon: RiAuctionLine,
+      title: "Escrituração e acompanhamento de processos trabalhistas",
+      text: "Escrituração de processos trabalhistas, lançamento de informações no eSocial (eventos S-2500 e S-2501) e acompanhamento das obrigações decorrentes de reclamatórias trabalhistas.",
     },
     {
       icon: FiUserCheck,
@@ -101,9 +107,14 @@ const Services = () => {
             Entre em contato conosco e descubra como podemos ajudar sua empresa a crescer com segurança e conformidade.
           </p>
         </div>
-        <button className="flex items-center justify-center rounded-md bg-white px-8 py-4 text-base font-medium text-(--color-variable-primary) transition-transform duration-300 hover:scale-[1.03]">
+        <a
+          href="https://wa.me/5521969538015"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center rounded-md bg-white px-8 py-4 text-base font-medium text-(--color-variable-primary) transition-transform duration-300 hover:scale-[1.03]"
+        >
           Solicitar Orçamento
-        </button>
+        </a>
       </div>
     </section>
   );
