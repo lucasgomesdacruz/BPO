@@ -4,9 +4,11 @@ interface CardProps {
     icon?: React.ElementType;
     subText?: string;
     buttonText?: string;
+    href?: string;
+    external?: boolean;
 }
 
-const CardAbout = ({ icon: Icon, title, text, subText, buttonText }: CardProps) => {
+const CardAbout = ({ icon: Icon, title, text, subText, buttonText, href, external }: CardProps) => {
     return (
         <div className="flex h-full flex-col items-center justify-between rounded-lg border-t-[5px] border-transparent bg-[linear-gradient(white,white)_padding-box,linear-gradient(to_right,#14b8a6,#0d9488,#0f766e)_border-box] p-6 text-center shadow-[0_8px_12px_-4px_rgba(0,0,0,0.2)] transition duration-200 md:hover:-translate-y-1 md:hover:shadow-[0_12px_20px_-6px_rgba(0,0,0,0.25)]">
             {Icon && (
@@ -18,9 +20,20 @@ const CardAbout = ({ icon: Icon, title, text, subText, buttonText }: CardProps) 
             <p className="mb-4 text-sm leading-6 text-(--color-tercery)">{text}</p>
             {subText && <p className="mb-4 text-sm leading-6 text-(--color-tercery)">{subText}</p>}
             {buttonText && (
-                <button className="mt-auto flex h-8 w-[80%] items-center justify-center rounded-md bg-(--color-variable-primary) text-sm font-medium text-white transition-colors duration-300 md:hover:bg-(--color-primary)">
-                    {buttonText}
-                </button>
+                href ? (
+                    <a
+                        href={href}
+                        target={external ? "_blank" : undefined}
+                        rel={external ? "noopener noreferrer" : undefined}
+                        className="mt-auto flex h-8 w-[80%] items-center justify-center rounded-md bg-(--color-variable-primary) text-sm font-medium text-white transition-colors duration-300 md:hover:bg-(--color-primary)"
+                    >
+                        {buttonText}
+                    </a>
+                ) : (
+                    <button className="mt-auto flex h-8 w-[80%] items-center justify-center rounded-md bg-(--color-variable-primary) text-sm font-medium text-white transition-colors duration-300 md:hover:bg-(--color-primary)">
+                        {buttonText}
+                    </button>
+                )
             )}
         </div>
     );

@@ -45,11 +45,13 @@ const Header = () => {
 
                 {/* Actions */}
                 <div className="flex items-center gap-3">
-                    <Link
-                        href="/contato"
+                    <a
+                        href="https://wa.me/5521969538015"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="hidden rounded-md px-3 py-2 text-sm font-medium text-white bg-(--color-variable-primary) hover:opacity-95 md:inline-flex">
                         Fale Conosco
-                    </Link>
+                    </a>
 
                     {/* Mobile sheet trigger */}
                     <Sheet open={open} onOpenChange={setOpen}>

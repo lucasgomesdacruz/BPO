@@ -33,12 +33,20 @@ const Hero = () => {
 
                     <div className="flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start">
                         <Button
+                            render={<a href="/#servicos" />}
                             variant="outline"
                             className="h-11 bg-(--color-variable-primary) px-8 text-white transition-colors duration-300 hover:bg-(--color-primary) hover:text-white text-base"
                         >
                             Conheça nossos serviços
                         </Button>
                         <Button
+                            render={
+                                <a
+                                    href="https://wa.me/5521969538015"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                />
+                            }
                             variant="outline"
                             className="h-11 border-(--color-variable-primary) px-8 text-(--color-variable-primary) transition-colors duration-300 hover:text-(--color-secodary) text-base"
                         >

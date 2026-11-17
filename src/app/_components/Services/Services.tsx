@@ -101,9 +101,14 @@ const Services = () => {
             Entre em contato conosco e descubra como podemos ajudar sua empresa a crescer com segurança e conformidade.
           </p>
         </div>
-        <button className="flex items-center justify-center rounded-md bg-white px-8 py-4 text-base font-medium text-(--color-variable-primary) transition-transform duration-300 hover:scale-[1.03]">
+        <a
+          href="https://wa.me/5521969538015"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center rounded-md bg-white px-8 py-4 text-base font-medium text-(--color-variable-primary) transition-transform duration-300 hover:scale-[1.03]"
+        >
           Solicitar Orçamento
-        </button>
+        </a>
       </div>
     </section>
   );

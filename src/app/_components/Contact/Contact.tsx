@@ -1,9 +1,10 @@
 "use client";
 import Badge from "../../components/ux/Badge/Badge";
 import CardAbout from "../../components/CardAbout/CardAbout";
-import { LuPhone, LuCircleCheckBig } from "react-icons/lu";
-import { FaRegComment } from "react-icons/fa";
+import { LuCircleCheckBig } from "react-icons/lu";
+import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { MdOutlineMail } from "react-icons/md";
+import { SlSocialLinkedin } from "react-icons/sl";
 import { Carousel } from "@/components/ui/carousel";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useEffect, useState } from "react";
@@ -17,25 +18,40 @@ const Contact = () => {
 
   const contactItems = [
     {
-      icon: LuPhone,
-      title: "Telefone",
-      text: "(00) 00000-0000.",
-      subText: "Seg à Sex, 8h às 18h",
-      buttonText: "Ligar Agora",
-    },
-    {
-      icon: FaRegComment,
-      title: "WhatsApp",
-      text: "(00) 00000-0000",
-      subText: "Atendimento rápido",
-      buttonText: "Enviar mensagem",
-    },
-    {
       icon: MdOutlineMail,
       title: "E-mail",
-      text: "contato@diegoconsultoria.com.br",
-      subText: "Resposta em até 24h",
+      text: "diego.consultoriadp@gmail.com",
+      subText: "Envie sua mensagem",
       buttonText: "Enviar e-mail",
+      href: "mailto:diego.consultoriadp@gmail.com",
+      external: false,
+    },
+    {
+      icon: FaWhatsapp,
+      title: "WhatsApp",
+      text: "(21) 96953-8015",
+      subText: "Atendimento rápido",
+      buttonText: "Enviar mensagem",
+      href: "https://wa.me/5521969538015",
+      external: true,
+    },
+    {
+      icon: FaInstagram,
+      title: "Instagram",
+      text: "@arqueiro.departamentopessoal",
+      subText: "Acompanhe nosso perfil",
+      buttonText: "Acessar Instagram",
+      href: "https://www.instagram.com/arqueiro.departamentopessoal/",
+      external: true,
+    },
+    {
+      icon: SlSocialLinkedin,
+      title: "LinkedIn",
+      text: "Diego Paulo",
+      subText: "Conecte-se pelo LinkedIn",
+      buttonText: "Acessar LinkedIn",
+      href: "https://www.linkedin.com/in/diego-paulo",
+      external: true,
     },
   ];
 
@@ -45,6 +61,8 @@ const Contact = () => {
     text: string;
     subText: string;
     buttonText: string;
+    href: string;
+    external: boolean;
   }) => (
     <div className="mb-2">
       <CardAbout
@@ -53,6 +71,8 @@ const Contact = () => {
         text={item.text}
         subText={item.subText}
         buttonText={item.buttonText}
+        href={item.href}
+        external={item.external}
       />
     </div>
   );
@@ -99,6 +119,8 @@ const Contact = () => {
             text={item.text}
             subText={item.subText}
             buttonText={item.buttonText}
+            href={item.href}
+            external={item.external}
           />
         ))}
       </div>
